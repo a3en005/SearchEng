@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Cygnus Search Portal</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8fafc;
+        }
+        .email-container {
+            background-color: white;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #e2e8f0;
+        }
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            gap: 15px;
+        }
+        .logo-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        .logo-text {
+            height: 32px;
+            width: auto;
+        }
+        .company-tagline {
+            font-size: 14px;
+            color: #64748b;
+            margin-top: 8px;
+            font-weight: 500;
+        }
+        .welcome-title {
+            font-size: 28px;
+            font-weight: bold;
+            color: #1e293b;
+            margin: 20px 0;
+        }
+        .content {
+            margin: 30px 0;
+        }
+        .greeting {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #374151;
+        }
+        .message {
+            font-size: 16px;
+            margin-bottom: 30px;
+            color: #4b5563;
+        }
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+            color: white;
+            padding: 16px 32px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 16px;
+            margin: 20px 0;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+            transition: all 0.2s ease;
+        }
+        .cta-button:hover {
+            background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
+            transform: translateY(-1px);
+            box-shadow: 0 6px 16px rgba(37, 99, 235, 0.4);
+        }
+        .cta-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+        .fallback-link {
+            background-color: #f1f5f9;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 30px 0;
+            border-left: 4px solid #2563eb;
+        }
+        .fallback-text {
+            font-size: 14px;
+            color: #64748b;
+            margin-bottom: 10px;
+        }
+        .fallback-url {
+            word-break: break-all;
+            color: #2563eb;
+            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+            font-size: 14px;
+            background-color: #e2e8f0;
+            padding: 8px 12px;
+            border-radius: 4px;
+            display: block;
+            margin-top: 8px;
+        }
+        .next-steps {
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            padding: 25px;
+            border-radius: 8px;
+            margin: 30px 0;
+            border: 1px solid #e2e8f0;
+        }
+        .next-steps-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1e293b;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        .next-steps-icon {
+            margin-right: 8px;
+            font-size: 20px;
+        }
+        .next-steps-text {
+            color: #4b5563;
+            font-size: 15px;
+        }
+        .signature {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #e2e8f0;
+        }
+        .signature-text {
+            color: #374151;
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+        .team-name {
+            color: #1e293b;
+            font-weight: 600;
+            font-size: 16px;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #e2e8f0;
+            color: #64748b;
+            font-size: 14px;
+        }
+        .footer-links {
+            margin-top: 15px;
+        }
+        .footer-link {
+            color: #2563eb;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .footer-link:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            .email-container {
+                padding: 20px;
+            }
+            .logo-container {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .logo-text {
+                height: 28px;
+            }
+            .welcome-title {
+                font-size: 24px;
+            }
+            .cta-button {
+                padding: 14px 24px;
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <div class="header">
+            <div class="logo-container">
+                <img src="https://cygnuspac-search-portal.vercel.app/images/icon.png" alt="Cygnus Icon" class="logo-icon">
+                <img src="https://cygnuspac-search-portal.vercel.app/images/logo.png" alt="Cygnus" class="logo-text">
+            </div>
+            <div class="company-tagline">The Most Comprehensive Search Platform for Professionals</div>
+            <div class="welcome-title">Welcome to Cygnus Search Portal!</div>
+        </div>
+
+        <div class="content">
+            <div class="greeting">
+                Hi {{ .Data.full_name | default "there" }},
+            </div>
+
+            <div class="message">
+                Thank you for signing up for <strong>Cygnus Search Portal</strong> account!
+            </div>
+
+            <div class="message">
+                You're just one step away from getting started. Please confirm your email address by clicking the button below:
+            </div>
+
+            <div class="cta-container">
+                <a href="{{ .ConfirmationURL }}" class="cta-button">
+                    👉 Confirm My Email
+                </a>
+            </div>
+
+            <div class="fallback-link">
+                <div class="fallback-text">
+                    If the button above doesn't work, copy and paste the link below into your browser:
+                </div>
+                <div class="fallback-url">
+                    {{ .ConfirmationURL }}
+                </div>
+            </div>
+
+            <div class="next-steps">
+                <div class="next-steps-title">
+                    <span class="next-steps-icon">🚀</span>
+                    What's next?
+                </div>
+                <div class="next-steps-text">
+                    After verifying your email, you'll gain full access to your Search dashboard where you can:
+                    <ul style="margin: 10px 0; padding-left: 20px;">
+                        <li>Search across multiple people databases</li>
+                        <li>Access Secretary of State records from all 50 states</li>
+                        <li>Query IRS and SEC databases</li>
+                        <li>Track your search history and analytics</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="signature">
+            <div class="signature-text">Welcome aboard,</div>
+            <div class="team-name">The Cygnus Team</div>
+        </div>
+
+        <div class="footer">
+            <p>© 2024 Cygnus. All rights reserved.</p>
+            <p>This email was sent to {{ .Email }}</p>
+            <div class="footer-links">
+                <a href="https://cygnuspac-search-portal.vercel.app" class="footer-link">Visit Website</a>
+                <a href="https://cygnuspac-search-portal.vercel.app/support" class="footer-link">Support</a>
+                <a href="https://cygnuspac-search-portal.vercel.app/privacy" class="footer-link">Privacy Policy</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
