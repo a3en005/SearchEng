@@ -1,0 +1,19 @@
+{
+  "name": "CygnusPac-Search-Portal",
+  "version": 2,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/next"
+    }
+  ],
+  "env": {
+    "NEXT_PUBLIC_SITE_URL": "https://cygnuspac-search-portal.vercel.app"
+  },
+  "functions": {
+    "app/**/*.{js,ts,tsx}": {
+      "maxDuration": 30
+    }
+  },
+  "regions": ["iad1"]
+}
